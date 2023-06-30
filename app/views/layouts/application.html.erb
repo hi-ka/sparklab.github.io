@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Spark Lab</title>
+    <link rel="stylesheet" href="style.scss">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.3/styles/default.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@10.7.3/lib/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= javascript_include_tag 'confirm' %>
+    <%= javascript_include_tag 'custom' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
+  </head>
+  <body>
+     <header>
+      <h1 class="logo">Spark Lab</h1>
+      <br>
+  <nav>
+    <ul class="menu">
+      <li><%= link_to 'ホーム', home_path %></li>
+      <li><%= link_to 'サービス概要', service_path %></li>
+      <li><%= link_to '初めての方へ', greeting_path %></li>
+      <li><%= link_to '学習の流れ', process_path %></li>
+      <li><%= link_to '料金プラン', new_payment_path %></li>
+      <li><%= link_to 'お問い合わせ', contact_path %></li>
+      <li><%= link_to 'ログイン', new_user_session_path %></li>
+    </ul>
+  </nav>
+  <br>
+    </header>
+    
+<div class="container main-content">
+  <div class="row">
+    <div class="col-md-9 content-area">
+　    <%= yield %>
+　  </div>
+    <div class="col-md-3 sidebar">
+　   <aside> 
+      <h4>本日の考察</h4>
+      <br>
+       <p><%= link_to '１．カオス時系列分析への扉', article47_path %></p>
+       <p><%= link_to '２．Rでベイズ統計学', article48_path %></p>
+       <p><%= link_to '３．juliaで数値計算', article49_path %></p>
+ 　 </aside>
+ 　 <aside>
+    <h4>新着記事</h4>
+    <br>
+    <ul class="list-unstyled">
+      <li><%= link_to '確率変数とは', article1_path %></li>
+      <li><%= link_to '離散的確率変数とは', article2_path %></li>
+      <li><%= link_to '連続的確率変数とは', article3_path %></li>
+      <li><%= link_to 'ベルヌーイ分布とは', article4_path %></li>
+      <li><%= link_to '二項分布とは', article5_path %></li>
+      <li><%= link_to 'ポアソン分布とは', article6_path %></li>
+      <li><%= link_to '幾何分布とは', article7_path %></li>
+      <li><%= link_to '超幾何分布とは', article8_path %></li>
+      <li><%= link_to '離散一様分布とは', article9_path %></li>
+      <li><%= link_to '指数分布とは', article10_path %></li>
+      <li><%= link_to '正規分布とは', article11_path %></li>
+      <li><%= link_to '連続一様分布とは', article12_path %></li>
+      <li><%= link_to 'ガンマ分布とは', article13_path %></li>
+      <li><%= link_to '対数正規分布とは', article14_path %></li>
+      <li><%= link_to '三角分布とは', article15_path %></li>
+      <li><%= link_to 'ベータ分布とは', article16_path %></li>
+      <li><%= link_to '期待値とは', article17_path %></li>
+      <li><%= link_to '分散とは', article18_path %></li>
+      <li><%= link_to '共分散とは', article19_path %></li>
+      <li><%= link_to '相関係数とは', article20_path %></li>
+      <li><%= link_to '母集団と標本', article21_path %></li>
+      <li><%= link_to '大数の法則とは', article22_path %></li>
+      <li><%= link_to '中心極限定理とは', article23_path %></li>
+      <li><%= link_to '点推定とは', article24_path %></li>
+      <li><%= link_to '統計的仮説検定とは', article25_path %></li>
+    </ul>
+  </aside>
+ 　</div>
+　</div>
+</div>
+<footer>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="/assets/logo.png" alt="SparkLab-logo">
+      </div>
+      <div class="col-md-4">
+       <h3>利用の方へ</h3>
+       <ul>
+	     <li><%= link_to '初めての方へ', greeting_path %></li>
+	      <li><%= link_to '学習の流れ', process_path %></li>
+       	<li><%= link_to 'Webテキストで学ぶ', qq_data_science_traning_path %></li>
+	      <li><%= link_to 'コミュニティで学ぶ', messages_path %></li>
+       </ul>
+       <br>
+       <h3>プログラミング言語の導入</h3>
+       <ul>
+	        <li><%= link_to 'R導入ガイド', article50_path %></li>
+	        <li><%= link_to 'python導入ガイド', article51_path %></li>
+	        <li><%= link_to 'julia導入ガイド', article52_path %></li>
+	      </ul>
+
+    </div>
+     <div class="col-md-4">
+      <h3>運営に関する情報</h3>
+      <ul>
+        <li><%= link_to '運営会社', company_path %></li>
+        <li><%= link_to '利用規約', terms_path %></li>
+        <li><%= link_to 'プライバシーポリシー', privacypolicy_path %></li>
+        <li><%= link_to '特定商取引法に関する表示', raw_path %></li>
+        <li><%= link_to 'お問い合わせ', contact_path %></li>
+      </ul>
+     </div>
+    </div>
+  <div class="footer-bottom">
+  <p>&copy; 2019 SparkLab,LLC All rights reserved.</p>
+  </div>
+</footer>
+      </body>
+</html>

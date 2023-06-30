@@ -1,0 +1,802 @@
+<h1>QQ Data Sciences Training</h1>
+<div class="hero-image">
+                <img src="/assets/1685610937042.jpg" alt="hero-image" width="50%" height="auto">
+            </div>
+<br>
+<br>
+<br>
+<h2>第一章　記述統計学</h2>
+<br>
+<ol>
+    <li>データの要約</li>
+    <ul>
+        <li><%= link_to 'データセットのサイズ、変数の数などの基本的な情報', article26_path %></li>
+        <li><%= link_to '平均、中央値、モードなどの集中傾向を示す統計量', article27_path %></li>
+        <li><%= link_to '分散、標準偏差、範囲などのばらつきを示す統計量', article28_path %></li>
+    </ul><br>
+    <li>データの分布</li>
+    <ul>
+        <li><%= link_to 'ヒストグラムや箱ひげ図を用いたデータの分布の可視化', article29_path %></li>
+        <li><%= link_to '正規分布、一様分布、偏った分布などの特定の分布の特徴', article30_path %></li>
+        <li><%= link_to '歪度や尖度などの分布の形状を示す指標', article31_path %></li>
+    </ul><br>
+    <li>相関分析</li>
+    <ul>
+        <li><%= link_to '2つ以上の変数の間の関係を評価する', article32_path %></li>
+        <li><%= link_to '相関係数の計算と解釈', article33_path %></li>
+        <li><%= link_to '相関行列の作成と解析', article34_path %></li>
+    </ul><br>
+    <li>クロス集計と分割表</li>
+    <ul>
+        <li><%= link_to 'カテゴリカルな変数の関係を評価する', article35_path %></li>
+        <li><%= link_to 'クロス集計表の作成と解析', article36_path %></li>
+        <li><%= link_to 'カイ二乗検定などの統計的なテスト', article37_path %></li>
+    </ul><br>
+    <li>異常値の検出</li>
+    <ul>
+        <li><%= link_to 'データセットから異常な値を特定する手法', article38_path %></li>
+        <li><%= link_to '異常値の定義と特徴', article39_path %></li>
+        <li><%= link_to 'ボックスプロットやZスコアなどの異常値検出手法', article40_path %></li>
+    </ul><br>
+    <li>データの可視化</li>
+    <ul>
+        <li><%= link_to '散布図や折れ線グラフなどのデータの関係を可視化する手法', article41_path %></li>
+        <li><%= link_to 'バブルチャートやヒートマップなどの多次元データの可視化手法', article42_path %></li>
+        <li><%= link_to 'プロットのカスタマイズと解釈', article43_path %></li>
+    </ul><br>
+    <li>統計的な推論</li>
+    <ul>
+        <li><%= link_to '標本から母集団の特徴を推論する手法', article44_path %></li>
+        <li><%= link_to '標本平均や信頼区間などの推論統計量', article45_path %></li>
+        <li><%= link_to '仮説検定やp値の解釈', article46_path %></li>
+    </ul>
+</ol>
+<br>
+<h2>第二章　探索的データ分析</h2>
+<br>
+<ol>
+    <li>データの可視化</li>
+    <ul>
+        <li><%= link_to 'ヒストグラムや箱ひげ図を用いたデータの分布の可視化', article_path %></li>
+        <li><%= link_to '散布図やペアプロットによる変数間の関係の可視化', article_path %></li>
+        <li><%= link_to '折れ線グラフや棒グラフなどの時間的な変化の可視化', article_path %></li>
+    </ul><br>
+    <li>データの要約</li>
+    <ul>
+        <li><%= link_to '中央値、平均、標準偏差などの集中傾向を示す統計量', article_path %></li>
+        <li><%= link_to '四分位数や範囲などのデータのばらつきを示す統計量', article_path %></li>
+        <li><%= link_to 'データの特徴を記述する指標や要約表の作成', article_path %></li>
+    </ul><br>
+    <li>相関分析</li>
+    <ul>
+        <li><%= link_to '変数間の関係性を評価する', article_path %></li>
+        <li><%= link_to '相関係数や相関行列の計算と解釈', article_path %></li>
+        <li><%= link_to '相関を可視化するためのヒートマップや散布図行列の作成', article_path %></li>
+    </ul><br>
+    <li>異常値の検出</li>
+    <ul>
+        <li><%= link_to 'データセットから異常な値を特定する手法', article_path %></li>
+        <li><%= link_to '異常値の定義と特徴', article_path %></li>
+        <li><%= link_to '異常値の可視化や統計的な手法による検出', article_path %></li>
+    </ul><br>
+    <li>変数の選択と変換</li>
+    <ul>
+        <li><%= link_to 'データセットから異常な値を特定する手法', article_path %></li>
+        <li><%= link_to '異常値の定義と特徴', article_path %></li>
+        <li><%= link_to '異常値の可視化や統計的な手法による検出', article_path %></li>
+    </ul><br>
+    <li>変数の選択と変換</li>
+    <ul>
+        <li><%= link_to '変数の重要性を評価する', article_path %></li>
+        <li><%= link_to '特徴選択や次元削減手法の利用', article_path %></li>
+        <li><%= link_to '変数の変換や尺度の統一化の方法', article_path %></li>
+    </ul><br>
+    <li>クラスタリング</li>
+    <ul>
+        <li><%= link_to '類似したデータをグループ化する手法', article_path %></li>
+        <li><%= link_to '階層的クラスタリングやk-meansクラスタリングの実施', article_path %></li>
+        <li><%= link_to 'クラスタの可視化や解釈', article_path %></li>
+    </ul><br>
+    <li>パターンの発見</li>
+    <ul>
+        <li><%= link_to 'データセットから興味深いパターンや相関関係を発見する手法', article_path %></li>
+        <li><%= link_to '頻出パターンマイニングや関連ルールの抽出', article_path %></li>
+        <li><%= link_to 'データの探索的な可視化による洞察の獲得', article_path %></li>
+    </ul>
+</ol>
+<br>
+<h2>第三章　推測統計学</h2>
+<br>
+<ol>
+    <li>標本抽出と推定</li>
+    <ul>
+        <li><%= link_to '母集団と標本の関係', article_path %></li>
+        <li><%= link_to '無作為抽出と代表性の確保', article_path %></li>
+        <li><%= link_to '標本平均や標本分散を用いた母集団パラメータの推定', article_path %></li>
+    </ul><br>
+    <li>信頼区間</li>
+    <ul>
+        <li><%= link_to '標本から求めた推定量の信頼性の評価', article_path %></li>
+        <li><%= link_to '信頼区間の構築と解釈', article_path %></li>
+        <li><%= link_to 'サンプルサイズと信頼区間の幅の関係', article_path %></li>
+    </ul><br>
+    <li>仮説検定</li>
+    <ul>
+        <li><%= link_to '統計的な仮説の設定と検定手法', article_path %></li>
+        <li><%= link_to '有意水準とp値の解釈', article_path %></li>
+        <li><%= link_to '一様性の検定、平均値の比較などの仮説検定手法', article_path %></li>
+    </ul><br>
+    <li>t検定</li>
+    <ul>
+        <li><%= link_to '母集団の平均値の差の検定', article_path %></li>
+        <li><%= link_to '1標本t検定と対応のあるt検定', article_path %></li>
+        <li><%= link_to '2標本t検定と対応のないt検定', article_path %></li>
+    </ul><br>
+    <li>分散分析</li>
+    <ul>
+        <li><%= link_to '複数の群の平均値の比較', article_path %></li>
+        <li><%= link_to '1要因分散分析と多要因分散分析', article_path %></li>
+        <li><%= link_to 'p値と効果の解釈', article_path %></li>
+    </ul><br>
+    <li>相関と回帰</li>
+    <ul>
+        <li><%= link_to '変数間の関係性の評価', article_path %></li>
+        <li><%= link_to '相関係数の解釈', article_path %></li>
+        <li><%= link_to '単回帰分析と重回帰分析', article_path %></li>
+    </ul><br>
+    <li>非パラメトリック検定</li>
+    <ul>
+        <li><%= link_to 'データの分布についての仮定を必要としない検定手法', article_path %></li>
+        <li><%= link_to 'Wilcoxon signed-rank検定やMann-Whitney U検定など', article_path %></li>
+        <li><%= link_to 'ブートストラップ法の利用', article_path %></li>
+    </ul><br>
+    <li>分布フィッティング</li>
+    <ul>
+        <li><%= link_to 'データの分布を統計モデルで表現する', article_path %></li>
+        <li><%= link_to '正規分布、指数分布、ガンマ分布などの適合度検定', article_path %></li>
+        <li><%= link_to 'モデルの選択と解釈', article_path %></li>
+    </ul>
+</ol>
+<br>
+<h2>第四章　回帰分析</h2>
+<br>
+<ol>
+    <li>線形回帰分析</li>
+    <ul>
+        <li><%= link_to '1変数線形回帰と2変数線形回帰の概要', article_path %></li>
+        <li><%= link_to '最小二乗法による回帰係数の推定と解釈', article_path %></li>
+        <li><%= link_to '回帰直線の評価と予測', article_path %></li>
+    </ul><br>
+    <li>多重線形回帰分析</li>
+    <ul>
+        <li><%= link_to '複数の説明変数を用いた回帰分析', article_path %></li>
+        <li><%= link_to '多重共線性の評価と解決策', article_path %></li>
+        <li><%= link_to '決定係数とモデルの適合度評価', article_path %></li>
+    </ul><br>
+    <li>変数の選択とモデルの評価</li>
+    <ul>
+        <li><%= link_to '変数選択手法（前進選択、後退選択、ステップワイズ選択など）', article_path %></li>
+        <li><%= link_to 'AICやBICなどの情報量基準によるモデル選択', article_path %></li>
+        <li><%= link_to '残差分析とモデルの適合度評価', article_path %></li>
+    </ul><br>
+    <li>非線形回帰分析</li>
+    <ul>
+        <li><%= link_to '非線形な関係性をモデル化する手法', article_path %></li>
+        <li><%= link_to 'ロジスティック回帰、指数関数回帰などの非線形モデル', article_path %></li>
+        <li><%= link_to 'モデルの適合度と解釈', article_path %></li>
+    </ul><br>
+    <li>重回帰分析の拡張</li>
+    <ul>
+        <li><%= link_to '相互作用項や多項式項を用いたモデルの拡張', article_path %></li>
+        <li><%= link_to '多重共線性の評価と解決策', article_path %></li>
+        <li><%= link_to 'ダミー変数を用いたカテゴリカル変数の扱い', article_path %></li>
+    </ul><br>
+    <li>時系列回帰分析</li>
+    <ul>
+        <li><%= link_to '時間的な変動を考慮した回帰モデル', article_path %></li>
+        <li><%= link_to '自己回帰モデルや移動平均モデルの利用', article_path %></li>
+        <li><%= link_to '季節性のモデリングと解釈', article_path %></li>
+    </ul><br>
+    <li>ロバスト回帰分析</li>
+    <ul>
+        <li><%= link_to '外れ値や異常値に頑健な回帰手法', article_path %></li>
+        <li><%= link_to 'メディアン回帰やM-推定法の利用', article_path %></li>
+        <li><%= link_to 'ロバスト回帰モデルの解釈', article_path %></li>
+    </ul>
+</ol>
+<br>
+<h2>第五章　分類分析</h2>
+<br>
+<ol>
+    <li>分類問題の概要</li>
+    <ul>
+        <li><%= link_to '分類問題とは何か]', article_path %></li>
+        <li><%= link_to '教師あり学習と教師なし学習の違い', article_path %></li>
+        <li><%= link_to '分類モデルの評価指標', article_path %></li>
+    </ul><br>
+    <li>ロジスティック回帰</li>
+    <ul>
+        <li><%= link_to '二値分類のためのロジスティック回帰', article_path %></li>
+        <li><%= link_to 'モデルの学習と予測', article_path %></li>
+        <li><%= link_to '多クラス分類への拡張', article_path %></li>
+    </ul><br>
+    <li>k最近傍法（k-Nearest Neighbors, k-NN）</li>
+    <ul>
+        <li><%= link_to 'インスタンスベース学習の基礎', article_path %></li>
+        <li><%= link_to '近傍点の選択とクラスラベルの決定', article_path %></li>
+        <li><%= link_to 'ハイパーパラメータの設定とモデルの評価', article_path %></li>
+    </ul><br>
+    <li>サポートベクターマシン（Support Vector Machines, SVM）</li>
+    <ul>
+        <li><%= link_to '線形分離可能な場合のSVM', article_path %></li>
+        <li><%= link_to 'カーネルトリックを用いた非線形分類', article_path %></li>
+        <li><%= link_to 'マージンとサポートベクターの意味', article_path %></li>
+    </ul><br>
+    <li>決定木とランダムフォレスト</li>
+    <ul>
+        <li><%= link_to '決定木の構築と分類ルールの作成', article_path %></li>
+        <li><%= link_to '決定木の過学習とプルーニング', article_path %></li>
+        <li><%= link_to 'ランダムフォレストのアンサンブル学習', article_path %></li>
+    </ul><br>
+    <li>ニューラルネットワーク（Neural Networks）</li>
+    <ul>
+        <li><%= link_to 'パーセプトロンとニューラルネットワークの基礎', article_path %></li>
+        <li><%= link_to 'ニューラルネットワークの学習と重みの更新', article_path %></li>
+        <li><%= link_to '深層学習と畳み込みニューラルネットワーク（CNN）', article_path %></li>
+        
+    </ul><br>
+    <li>アンサンブル学習</li>
+    <ul>
+        <li><%= link_to 'バギング、ブースティング、スタッキングなどの手法', article_path %></li>
+        <li><%= link_to 'アンサンブル学習の利点と限界', article_path %></li>
+        <li><%= link_to 'アンサンブルモデルの評価と比較', article_path %></li>
+    </ul><br>
+    <li>特徴選択と次元削減</li>
+    <ul>
+        <li><%= link_to '特徴選択の手法と特徴量の重要度評価', article_path %></li>
+        <li><%= link_to '主成分分析（PCA）や線形判別分析（LDA）などの次元削減手法', article_path %></li>
+        <li><%= link_to '特徴選択と次元削減の効果と適用例', article_path %></li>
+    </ul>
+</ol>
+<br>
+<h2>第六章　クラスタリング</h2>
+<br>
+<ol>
+    <li>クラスタリングの概要</li>
+    <ul>
+        <li><%= link_to 'クラスタリングとは何か', article_path %></li>
+        <li><%= link_to '教師なし学習との関係', article_path %></li>
+        <li><%= link_to 'クラスタリングの利用と応用例', article_path %></li>
+    </ul><br>
+    <li>階層的クラスタリング</li>
+    <ul>
+        <li><%= link_to '凝集型クラスタリングと分割型クラスタリング', article_path %></li>
+        <li><%= link_to 'クラスタ間の類似度の評価方法', article_path %></li>
+        <li><%= link_to 'デンドログラムの解釈とクラスタの特性', article_path %></li>
+    </ul><br>
+    <li>k-meansクラスタリング</li>
+    <ul>
+        <li><%= link_to 'k-meansアルゴリズムの概要と手順', article_path %></li>
+        <li><%= link_to '初期セントロイドの選び方と収束性', article_path %></li>
+        <li><%= link_to 'クラスタ数の決定とエルボー法', article_path %></li>
+    </ul><br>
+    <li>密度ベースクラスタリング</li>
+    <ul>
+        <li><%= link_to 'DBSCANアルゴリズムの概要と特徴', article_path %></li>
+        <li><%= link_to 'エプシロンと最小ポイント数の設定', article_path %></li>
+        <li><%= link_to 'ノイズポイントと境界ポイントの識別', article_path %></li>
+    </ul><br>
+    <li>クラスタ評価指標</li>
+    <ul>
+        <li><%= link_to 'クラスタ内のコンパクトさとクラスタ間の分離度', article_path %></li>
+        <li><%= link_to 'シルエット係数やダベンドーフ指数などの指標', article_path %></li>
+        <li><%= link_to 'クラスタ評価指標の解釈と比較', article_path %></li>
+    </ul><br>
+    <li>非階層的クラスタリング</li>
+    <ul>
+        <li><%= link_to 'k-medoidsクラスタリングの概要とメドイドの意味', article_path %></li>
+        <li><%= link_to '非階層的クラスタリングの利点と限界', article_path %></li>
+        <li><%= link_to 'クラスタリング手法の選択と適用例', article_path %></li>
+    </ul><br>
+    <li>クラスタリングの可視化</li>
+    <ul>
+        <li><%= link_to '散布図やヒートマップを用いたクラスタ可視化', article_path %></li>
+        <li><%= link_to '主成分分析（PCA）やt-SNEによる次元削減', article_path %></li>
+        <li><%= link_to 'クラスタリング結果の解釈と可視化手法', article_path %></li>
+    </ul><br>
+    <li>クラスタリングの応用</li>
+    <ul>
+        <li><%= link_to '顧客セグメンテーションやマーケット分析への適用', article_path %></li>
+        <li><%= link_to '自然言語処理におけるテキストクラスタリング', article_path %></li>
+        <li><%= link_to 'バイオインフォマティクスや画像処理への応用', article_path %></li>
+    </ul>
+</ol>
+<br>
+<h2>第七章　時系列分析</h2>
+<br>
+<ol>
+    <li>時系列データの概要</li>
+    <ul>
+        <li><%= link_to '時系列データの特徴と要素', article_path %></li>
+        <li><%= link_to '?勢、季節性、周期性、ノイズの概念', article_path %></li>
+        <li><%= link_to '時系列データの可視化と基本統計量の解釈', article_path %></li>
+    </ul><br>
+    <li>時系列データのモデリング</li>
+    <ul>
+        <li><%= link_to '時系列データの定常性と非定常性', article_path %></li>
+        <li><%= link_to '自己相関と部分自己相関の分析', article_path %></li>
+        <li><%= link_to 'ARモデル、MAモデル、ARMAモデルの概要', article_path %></li>
+    </ul><br>
+    <li>季節性のモデリング</li>
+    <ul>
+        <li><%= link_to '季節調整と季節成分の推定方法', article_path %></li>
+        <li><%= link_to 'SARIMAモデルの概要とパラメータの設定', article_path %></li>
+        <li><%= link_to '季節性の除去とデータの予測', article_path %></li>
+    </ul><br>
+    <li>時系列データの予測</li>
+    <ul>
+        <li><%= link_to '単純指数平滑法や移動平均法の予測手法', article_path %></li>
+        <li><%= link_to 'トレンド法と季節成分の考慮', article_path %></li>
+        <li><%= link_to '機械学習ベースの時系列予測モデル', article_path %></li>
+    </ul><br>
+    <li>時系列データの分析手法</li>
+    <ul>
+        <li><%= link_to '時系列クラスタリングの手法と解釈', article_path %></li>
+        <li><%= link_to '異常検知と変化点検出の手法', article_path %></li>
+        <li><%= link_to 'スペクトル分析と周波数領域の解析', article_path %></li>
+    </ul><br>
+    <li>ベクトル自己回帰（VAR）モデル</li>
+    <ul>
+        <li><%= link_to '複数の時系列データの同時モデリング', article_path %></li>
+        <li><%= link_to 'VARモデルの推定と予測', article_path %></li>
+        <li><%= link_to 'グレンジャー因果性テストと因果関係の解釈', article_path %></li>
+    </ul><br>
+    <li>状態空間モデル</li>
+    <ul>
+        <li><%= link_to '潜在的な状態を考慮したモデリング手法', article_path %></li>
+        <li><%= link_to 'カルマンフィルタとスムーザーの利用', article_path %></li>
+        <li><%= link_to '状態空間モデルのパラメータ推定と予測', article_path %></li>
+    </ul><br>
+    <li>パネルデータの時系列分析</li>
+    <ul>
+        <li><%= link_to 'パネルデータの概要と特性', article_path %></li>
+        <li><%= link_to '固定効果モデルとランダム効果モデルの利用', article_path %></li>
+        <li><%= link_to 'パネルデータの時間的依存性の考慮', article_path %></li>
+    </ul>
+</ol>
+<br>
+<h2>第八章　機械学習</h2>
+<br>
+<ol>
+    <li>機械学習の基礎</li>
+    <ul>
+        <li><%= link_to '機械学習の定義と応用範囲', article_path %></li>
+        <li><%= link_to '教師あり学習、教師なし学習、強化学習の概要', article_path %></li>
+        <li><%= link_to 'モデルの学習と予測の基本原理', article_path %></li>
+    </ul><br>
+    <li>教師あり学習</li>
+    <ul>
+        <li><%= link_to '回帰分析と分類分析の概要', article_path %></li>
+        <li><%= link_to '線形回帰、ロジスティック回帰、決定木、SVMなどの手法', article_path %></li>
+        <li><%= link_to 'モデルの評価と適切なモデル選択', article_path %></li>
+    </ul><br>
+    <li>教師なし学習</li>
+    <ul>
+        <li><%= link_to 'クラスタリング、次元削減、異常検知の概要', article_path %></li>
+        <li><%= link_to 'k-means、DBSCAN、PCA、アプリオリアルゴリズムなどの手法', article_path %></li>
+        <li><%= link_to 'モデルの解釈と適切なパラメータの設定', article_path %></li>
+    </ul><br>
+    <li>深層学習</li>
+    <ul>
+        <li><%= link_to 'ニューラルネットワークの基礎とアーキテクチャ', article_path %></li>
+        <li><%= link_to '畳み込みニューラルネットワーク、リカレントニューラルネットワークの概要', article_path %></li>
+        <li><%= link_to '転移学習とプリトレーニングの利用', article_path %></li>
+    </ul><br>
+    <li>特徴エンジニアリング</li>
+    <ul>
+        <li><%= link_to '特徴選択、特徴抽出、特徴変換の手法', article_path %></li>
+        <li><%= link_to 'ワンホットエンコーディング、スケーリング、カテゴリカル特徴の処理', article_path %></li>
+        <li><%= link_to 'ドメイン知識の利用と特徴エンジニアリングの評価', article_path %></li>
+    </ul><br>
+    <li>モデル評価とパフォーマンス指標</li>
+    <ul>
+        <li><%= link_to '正解率、適合率、再現率、F1スコアなどの指標', article_path %></li>
+        <li><%= link_to 'ROC曲線とAUC、混同行列の解釈', article_path %></li>
+        <li><%= link_to '過学習とモデルの汎化性能の評価', article_path %></li>
+    </ul><br>
+    <li>ハイパーパラメータチューニング</li>
+    <ul>
+        <li><%= link_to 'グリッドサーチ、ランダムサーチ、ベイズ最適化などの手法', article_path %></li>
+        <li><%= link_to 'クロスバリデーションとモデルの安定性評価', article_path %></li>
+        <li><%= link_to 'ハイパーパラメータの設定とチューニング戦略', article_path %></li>
+    </ul><br>
+    <li>強化学習</li>
+    <ul>
+        <li><%= link_to '強化学習の基本概念と要素', article_path %></li>
+        <li><%= link_to 'マルコフ決定過程（MDP）と価値関数', article_path %></li>
+        <li><%= link_to 'Q学習、SARSA、モンテカルロ法などの手法', article_path %></li>
+    </ul><br>
+    <li>オンライン学習とバッチ学習</li>
+    <ul>
+        <li><%= link_to 'オンライン学習とバッチ学習の違い', article_path %></li>
+        <li><%= link_to 'ミニバッチ学習と確率的勾配降下法（SGD）', article_path %></li>
+        <li><%= link_to 'モデルの逐次更新と適応性の向上', article_path %></li>
+    </ul><br>
+    <li>不均衡データへの対処</li>
+    <ul>
+        <li><%= link_to '不均衡データの課題と影響', article_path %></li>
+        <li><%= link_to 'アンダーサンプリングとオーバーサンプリングの手法', article_path %></li>
+        <li><%= link_to 'コスト感度学習と正確度パラドックスの解決策', article_path %></li>
+    </ul><br>
+    <li>機械学習の解釈可能性</li>
+    <ul>
+        <li><%= link_to 'モデルの解釈と説明可能性の重要性', article_path %></li>
+        <li><%= link_to '特徴の重要度評価とモデルのブラックボックス化', article_path %></li>
+        <li><%= link_to 'SHAP値、部分依存プロット、LIMEなどの手法', article_path %></li>
+    </ul><br>
+    <li>転移学習とドメイン適応</li>
+    <ul>
+        <li><%= link_to '転移学習の概要と利用シナリオ', article_path %></li>
+        <li><%= link_to 'ドメイン適応の手法とモデルの一般化能力', article_path %></li>
+        <li><%= link_to 'プリトレーニングと転移学習の組み合わせ', article_path %></li>
+    </ul><br>
+    <li>モデルのデプロイと運用</li>
+    <ul>
+        <li><%= link_to 'モデルのデプロイ戦略と展開環境', article_path %></li>
+        <li><%= link_to 'バッチ予測とリアルタイム予測の違い', article_path %></li>
+        <li><%= link_to 'モデルのモニタリングと再トレーニング戦略', article_path %></li>
+    </ul><br>
+    <li>倫理と公平性の考慮</li>
+    <ul>
+        <li><%= link_to 'モデルのバイアスと公平性の問題', article_path %></li>
+        <li><%= link_to 'データ収集とプライバシーの保護', article_path %></li>
+        <li><%= link_to '機械学習の倫理的な展望と社会的影響', article_path %></li>
+    </ul>
+    
+    
+</ol>
+<br>
+<h2>第九章　ディープラーニング</h2>
+<br>
+<ol>
+    <li>ニューラルネットワークの基礎</li>
+    <ul>
+        <li><%= link_to 'パーセプトロンと活性化関数', article_path %></li>
+        <li><%= link_to 'フィードフォワードニューラルネットワークの構造', article_path %></li>
+        <li><%= link_to 'バックプロパゲーションと勾配降下法', article_path %></li>
+    </ul><br>
+    <li>畳み込みニューラルネットワーク（CNN）</li>
+    <ul>
+        <li><%= link_to '畳み込み層、プーリング層、全結合層の役割', article_path %></li>
+        <li><%= link_to 'クラス分類、画像認識、物体検出の応用', article_path %></li>
+        <li><%= link_to 'プリトレーニングと転移学習の利用', article_path %></li>
+    </ul><br>
+    <li>リカレントニューラルネットワーク（RNN）</li>
+    <ul>
+        <li><%= link_to 'リカレント層とLSTM、GRUの概要', article_path %></li>
+        <li><%= link_to '自然言語処理、音声認識、時系列予測の応用', article_path %></li>
+        <li><%= link_to '双方向RNNとアテンションメカニズム', article_path %></li>
+    </ul><br>
+    <li>シーケンスモデリング</li>
+    <ul>
+        <li><%= link_to 'シーケンス生成と教師強制学習', article_path %></li>
+        <li><%= link_to '自己回帰モデルと教師なし学習', article_path %></li>
+        <li><%= link_to 'ビームサーチとサンプリング手法', article_path %></li>
+    </ul><br>
+    <li>ジェネレーティブモデル</li>
+    <ul>
+        <li><%= link_to '敵対的生成ネットワーク（GAN）の概要', article_path %></li>
+        <li><%= link_to '変分オートエンコーダ（VAE）と生成モデル', article_path %></li>
+        <li><%= link_to '生成モデルの評価とサンプル品質の向上', article_path %></li>
+    </ul><br>
+    <li>強化学習とディープラーニング</li>
+    <ul>
+        <li><%= link_to 'ポリシーグラディエント法とQ学習', article_path %></li>
+        <li><%= link_to 'ディープQネットワーク（DQN）と強化学習の結合', article_path %></li>
+        <li><%= link_to 'アクター・クリティック法とモデルベース強化学習', article_path %></li>
+    </ul><br>
+    <li>転移学習とドメイン適応</li>
+    <ul>
+        <li><%= link_to 'プリトレーニングとファインチューニングの手法', article_path %></li>
+        <li><%= link_to '転移学習の応用と事例紹介', article_path %></li>
+        <li><%= link_to 'ドメイン適応の問題と解決策', article_path %></li>
+    </ul><br>
+    <li>オートエンコーダと表現学習</li>
+    <ul>
+        <li><%= link_to 'オートエンコーダの構造と学習目的', article_path %></li>
+        <li><%= link_to '教師なし表現学習と次元削減', article_path %></li>
+        <li><%= link_to 'オートエンコーダの応用と生成モデル', article_path %></li>
+    </ul><br>
+    <li>ディープラーニングの最新トピックス</li>
+    <ul>
+        <li><%= link_to '軽量化とモデルの最適化', article_path %></li>
+        <li><%= link_to 'メタラーニングと自己学習', article_path %></li>
+        <li><%= link_to '誤差修正学習とワンショット学習', article_path %></li>
+        <li><%= link_to '強化学習とディープラーニングの統合', article_path %></li>
+    </ul><br>
+    <li>ジェネレーティブアドバーサリーネットワーク（GAN）</li>
+    <ul>
+        <li><%= link_to 'GANの基本概念とアーキテクチャ', article_path %></li>
+        <li><%= link_to '生成モデルのトレーニングと評価', article_path %></li>
+        <li><%= link_to 'GANの応用と画像生成の事例紹介', article_path %></li>
+    </ul><br>
+    <li>モデルの解釈性と信頼性</li>
+    <ul>
+        <li><%= link_to 'ブラックボックスモデルと解釈性の問題', article_path %></li>
+        <li><%= link_to 'ディープラーニングモデル解釈手法', article_path %></li>
+        <li><%= link_to '信頼性の確保と不確実性の推定', article_path %></li>
+    </ul><br>
+    <li>ディープラーニングの応用</li>
+    <ul>
+        <li><%= link_to '自然言語処理とテキスト生成', article_path %></li>
+        <li><%= link_to '画像認識と物体検出', article_path %></li>
+        <li><%= link_to '音声処理と音楽生成', article_path %></li>
+    </ul><br>
+    <li>ハードウェアとディープラーニング</li>
+    <ul>
+        <li><%= link_to 'GPUとTPUの利用', article_path %></li>
+        <li><%= link_to '分散学習とマルチGPUトレーニング', article_path %></li>
+        <li><%= link_to 'モデルのデプロイとエッジデバイスへの展開', article_path %></li>
+    </ul><br>
+    <li>ディープラーニングの倫理と社会的影響</li>
+    <ul>
+        <li><%= link_to 'データのバイアスと公平性の問題', article_path %></li>
+        <li><%= link_to 'プライバシーと個人情報の保護', article_path %></li>
+        <li><%= link_to 'ディープフェイクとマルウェアの脅威', article_path %></li>
+    </ul><br>
+    <li>ディープラーニングの進化と将来展望</li>
+    <ul>
+        <li><%= link_to 'ディープラーニングの進歩とマイルストーン', article_path %></li>
+        <li><%= link_to 'オートマティックモデル設計とAIの自己進化', article_path %></li>
+        <li><%= link_to 'ディープラーニングの将来の可能性', article_path %></li>
+    </ul>
+</ol>
+<br>
+<h2>第十章　自然言語処理</h2>
+<br>
+<ol>
+    <li>自然言語処理の基礎</li>
+    <ul>
+        <li><%= link_to '自然言語とコーパスの概要', article_path %></li>
+        <li><%= link_to '形態素解析と品詞タグ付け', article_path %></li>
+        <li><%= link_to '文法解析と構文解析', article_path %></li>
+    </ul><br>
+    <li>テキスト前処理</li>
+    <ul>
+        <li><%= link_to 'テキストのクリーニングと正規化', article_path %></li>
+        <li><%= link_to 'トークン化と単語分割', article_path %></li>
+        <li><%= link_to 'ストップワードの削除と語幹処理', article_path %></li>
+    </ul><br>
+    <li>テキスト表現方法</li>
+    <ul>
+        <li><%= link_to 'ワンホットエンコーディングとバッグオブワード', article_path %></li>
+        <li><%= link_to 'TF-IDFと単語埋め込み（Word Embedding）', article_path %></li>
+        <li><%= link_to '文字レベルの表現と文脈埋め込み（Contextual Embedding）', article_path %></li>
+    </ul><br>
+    <li>単語意味の理解</li>
+    <ul>
+        <li><%= link_to '単語の類似度計算と単語ベクトル', article_path %></li>
+        <li><%= link_to '単語ネットワークと単語の意味関係', article_path %></li>
+        <li><%= link_to '単語のエンティティと語義曖昧性解消', article_path %></li>
+    </ul><br>
+    <li>文書分類と感情分析</li>
+    <ul>
+        <li><%= link_to '文書分類の手法とアルゴリズム', article_path %></li>
+        <li><%= link_to '感情分析と感情の抽出', article_path %></li>
+        <li><%= link_to '機械学習とディープラーニングによる文書分類', article_path %></li>
+    </ul><br>
+    <li>情報抽出とエンティティ認識</li>
+    <ul>
+        <li><%= link_to '名前付きエンティティ認識（NER）と固有表現抽出', article_path %></li>
+        <li><%= link_to '関係抽出と事実抽出', article_path %></li>
+        <li><%= link_to '文書要約とキーフレーズ抽出', article_path %></li>
+    </ul><br>
+    <li>自然言語生成</li>
+    <ul>
+        <li><%= link_to '言語モデルと文書生成', article_path %></li>
+        <li><%= link_to 'テキスト自動補完と予測変換', article_path %></li>
+        <li><%= link_to 'テキストの自動要約と文章の生成', article_path %></li>
+    </ul><br>
+    <li>機械翻訳</li>
+    <ul>
+        <li><%= link_to '統計的機械翻訳とニューラル機械翻訳', article_path %></li>
+        <li><%= link_to 'シーケンスツーモデルとエンコーダ・デコーダ', article_path %></li>
+        <li><%= link_to 'ゼロショット翻訳と多言語翻訳', article_path %></li>
+    </ul><br>
+    <li>対話システム</li>
+    <ul>
+        <li><%= link_to 'ルールベースの対話システム', article_path %></li>
+        <li><%= link_to 'シーケンスツーモデルと応答生成', article_path %></li>
+        <li><%= link_to 'チャットボットと対話エージェント', article_path %></li>
+    </ul><br>
+    <li>センチメント分析</li>
+    <ul>
+        <li><%= link_to 'テキストからの感情分析と意見マイニング', article_path %></li>
+        <li><%= link_to 'ポジティブ／ネガティブの判定とスコアリング', article_path %></li>
+        <li><%= link_to 'エモーション分類と感情推定', article_path %></li>
+    </ul><br>
+    <li>テキスト生成モデル</li>
+    <ul>
+        <li><%= link_to 'リカレントニューラルネットワーク（RNN）によるテキスト生成', article_path %></li>
+        <li><%= link_to 'シーケンスツーモデルとテキスト生成', article_path %></li>
+        <li><%= link_to 'コンテキストの考慮と意味の一貫性', article_path %></li>
+    </ul><br>
+    <li>テキスト分析の応用</li>
+    <ul>
+        <li><%= link_to 'イベント抽出とトピックモデリング', article_path %></li>
+        <li><%= link_to 'テキストクラスタリングと類似度検索', article_path %></li>
+        <li><%= link_to 'テキストマイニングとトレンド分析', article_path %></li>
+    </ul><br>
+    <li>言語モデルと事前学習</li>
+    <ul>
+        <li><%= link_to 'レキシカル文法と統計言語モデル', article_path %></li>
+        <li><%= link_to 'BERTとGPTなどの事前学習モデル', article_path %></li>
+        <li><%= link_to 'ファインチューニングとドメイン適応', article_path %></li>
+    </ul><br>
+    <li>マルチモーダルなNLP</li>
+    <ul>
+        <li><%= link_to 'テキストと画像／音声の組み合わせ', article_path %></li>
+        <li><%= link_to 'テキストとビジュアル情報の関連付け', article_path %></li>
+        <li><%= link_to '複数モーダルデータの統合分析', article_path %></li>
+    </ul><br>
+    <li>エンタープライズNLP</li>
+    <ul>
+        <li><%= link_to 'テキスト分析のビジネス応用', article_path %></li>
+        <li><%= link_to 'カスタマーサービスとチャットボット', article_path %></li>
+        <li><%= link_to 'マーケティングとセンチメント分析', article_path %></li>
+    </ul>
+</ol>
+<br>
+<h2>第十一章　強化学習</h2>
+<br>
+<ol>
+    <li>強化学習の基礎</li>
+    <ul>
+        <li><%= link_to '強化学習の定義と要素', article_path %></li>
+        <li><%= link_to 'エージェントと環境の相互作用', article_path %></li>
+        <li><%= link_to '報酬と状態の概念', article_path %></li>
+    </ul><br>
+    <li>マルコフ決定過程（MDP）</li>
+    <ul>
+        <li><%= link_to '状態空間と行動空間', article_path %></li>
+        <li><%= link_to '状態遷移確率と報酬関数', article_path %></li>
+        <li><%= link_to 'ベルマン方程式と最適政策', article_path %></li>
+    </ul><br>
+    <li>動的計画法（DP）</li>
+    <ul>
+        <li><%= link_to 'ポリシー評価と価値反復法', article_path %></li>
+        <li><%= link_to 'ポリシー改善と価値反復法', article_path %></li>
+        <li><%= link_to 'ポリシー反復と価値反復法', article_path %></li>
+    </ul><br>
+    <li>モデルフリー強化学習</li>
+    <ul>
+        <li><%= link_to 'Q学習とTD学習', article_path %></li>
+        <li><%= link_to 'オンポリシーとオフポリシーメソッド', article_path %></li>
+        <li><%= link_to 'SARSAとDQNアルゴリズム', article_path %></li>
+    </ul><br>
+    <li>モンテカルロ法</li>
+    <ul>
+        <li><%= link_to 'モンテカルロ制御と評価', article_path %></li>
+        <li><%= link_to 'モンテカルロ探索と評価', article_path %></li>
+        <li><%= link_to 'モンテカルロ木探索', article_path %></li>
+    </ul><br>
+    <li>高度な強化学習手法</li>
+    <ul>
+        <li><%= link_to '方策勾配法とREINFORCE', article_path %></li>
+        <li><%= link_to 'DDPGとA3Cアルゴリズム', article_path %></li>
+        <li><%= link_to 'TRPOとPPOアルゴリズム', article_path %></li>
+    </ul><br>
+    <li>逆強化学習（IRL）</li>
+    <ul>
+        <li><%= link_to 'マックスエントロピーIRL', article_path %></li>
+        <li><%= link_to '逆強化学習の応用と問題設定', article_path %></li>
+        <li><%= link_to '逆強化学習の学習アルゴリズム', article_path %></li>
+    </ul><br>
+    <li>メタ強化学習</li>
+    <ul>
+        <li><%= link_to 'メタ学習とポリシーグラジエント', article_path %></li>
+        <li><%= link_to 'メタ強化学習のアプローチと応用', article_path %></li>
+        <li><%= link_to 'メタ強化学習の拡張と進化', article_path %></li>
+    </ul><br>
+    <li>強化学習の応用</li>
+    <ul>
+        <li><%= link_to 'ロボット制御とパスプランニング', article_path %></li>
+        <li><%= link_to 'ゲームAIとアタリゲーム', article_path %></li>
+        <li><%= link_to 'ネットワーク管理と���適化', article_path %></li>
+    </ul><br>
+    <li>強化学習の倫理と社会的影響</li>
+    <ul>
+        <li><%= link_to '強化学習の倫理的な問題', article_path %></li>
+        <li><%= link_to 'バイアスと公平性の問題', article_path %></li>
+        <li><%= link_to '強化学習の社会的応用とリスク', article_path %></li>
+    </ul>
+</ol>
+<br>
+<h2>第十二章　ビックデータ処理</h2>
+<br>
+<ol>
+    <li>ビッグデータの特徴と課題</li>
+    <ul>
+        <li><%= link_to 'ビッグデータの定義と特徴', article_path %></li>
+        <li><%= link_to 'ビッグデータの処理課題と制約', article_path %></li>
+        <li><%= link_to 'スケーラビリティとパフォーマンスの問題', article_path %></li>
+    </ul><br>
+    <li>分散データ処理</li>
+    <ul>
+        <li><%= link_to 'データ分散アーキテクチャの概要', article_path %></li>
+        <li><%= link_to 'マスター／ワーカーモデルとタスクスケジューリング', article_path %></li>
+        <li><%= link_to '分散データ処理フレームワーク（例：Hadoop、Spark）', article_path %></li>
+    </ul><br>
+    <li>データストリーム処理</li>
+    <ul>
+        <li><%= link_to 'リアルタイムデータ処理の概要', article_path %></li>
+        <li><%= link_to 'ストリームデータ処理フレームワーク（例：Apache Flink、Kafka）', article_path %></li>
+        <li><%= link_to 'イベントストリーム処理とストリームバッチ統合', article_path %></li>
+    </ul><br>
+    <li>データウェアハウスとOLAP</li>
+    <ul>
+        <li><%= link_to 'データウェアハウスの概要と設計原則', article_path %></li>
+        <li><%= link_to 'オンライン分析処理（OLAP）とクエリ最適化', article_path %></li>
+        <li><%= link_to 'データウェアハウスの可視化とダッシュボード', article_path %></li>
+    </ul><br>
+    <li>データレイクとNoSQLデータベース</li>
+    <ul>
+        <li><%= link_to 'データレイクの概要と設計原則', article_path %></li>
+        <li><%= link_to 'NoSQLデータベースの種類と特徴', article_path %></li>
+        <li><%= link_to 'ビッグデータ処理のためのNoSQLデータベース', article_path %></li>
+    </ul><br>
+    <li>クラウドベースのビッグデータ処理</li>
+    <ul>
+        <li><%= link_to 'クラウドコンピューティングとビッグデータ', article_path %></li>
+        <li><%= link_to 'クラウドベースのデータ処理サービス（例：Amazon EMR、Google BigQuery）', article_path %></li>
+        <li><%= link_to 'サーバーレスアーキテクチャとビッグデータ処理', article_path %></li>
+    </ul><br>
+    <li>ストリームライン処理とバッチ処理の統合</li>
+    <ul>
+        <li><%= link_to 'ストリーム処理とバッチ処理の相互作用', article_path %></li>
+        <li><%= link_to 'LambdaアーキテクチャとKappaアーキテクチャ', article_path %></li>
+        <li><%= link_to 'リアルタイムデータパイプラインの構築', article_path %></li>
+    </ul><br>
+    <li>ビッグデータのセキュリティとプライバシー</li>
+    <ul>
+        <li><%= link_to 'ビッグデータのセキュリティリスク', article_path %></li>
+        <li><%= link_to 'データ保護とプライバシーの問題', article_path %></li>
+        <li><%= link_to 'ビッグデータの監査とコンプライアンス', article_path %></li>
+    </ul><br>
+    <li>ビッグデータの可視化とインタラクション</li>
+    <ul>
+        <li><%= link_to 'ビジュアルデータの分析と可視化手法', article_path %></li>
+        <li><%= link_to 'インタラクティブなビッグデータの探索', article_path %></li>
+        <li><%= link_to 'ダッシュボードとリアルタイムモニタリング', article_path %></li>
+    </ul><br>
+    <li>ビッグデータのマイニングと機械学習</li>
+    <ul>
+        <li><%= link_to 'ビッグデータマイニングの概要と手法', article_path %></li>
+        <li><%= link_to 'パターン認識と異常検知', article_path %></li>
+        <li><%= link_to 'ビッグデータの機械学習と予測モデリング', article_path %></li>
+    </ul><br>
+    <li>スケーラブルな機械学習アルゴリズム</li>
+    <ul>
+        <li><%= link_to 'ビッグデータのバッチ学習とオンライン学習', article_path %></li>
+        <li><%= link_to '分散機械学習アルゴリズムとモデルパラメータサーバー', article_path %></li>
+        <li><%= link_to 'マルチスレッドとマルチノードの並列処理', article_path %></li>
+    </ul><br>
+    <li>ビッグデータのリアルタイム分析</li>
+    <ul>
+        <li><%= link_to 'ビッグデータのリアルタイム分析の要件', article_path %></li>
+        <li><%= link_to 'ストリーム処理とストリームマイニング', article_path %></li>
+        <li><%= link_to 'ビッグデータのリアルタイムダッシュボード', article_path %></li>
+    </ul><br>
+    <li>グラフ処理とビッグデータ</li>
+    <ul>
+        <li><%= link_to 'グラフデータの特徴と表現方法', article_path %></li>
+        <li><%= link_to 'グラフアルゴリズムとグラフ分析', article_path %></li>
+        <li><%= link_to 'ビッグデータのグラフ処理フレームワーク（例：Apache Giraph、Neo4j）', article_path %></li>
+    </ul><br>
+    <li>ビッグデータのクエリ処理と最適化</li>
+    <ul>
+        <li><%= link_to 'ビッグデータクエリ言語とクエリ最適化', article_path %></li>
+        <li><%= link_to 'パーティショニングとインデックス設計', article_path %></li>
+        <li><%= link_to 'クエリパフォーマンスチューニングとオプティマイザー', article_path %></li>
+    </ul>
+</ol>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Spark Lab</title>
+    <link rel="stylesheet" href="style.scss">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+  <body>
+      <header>
+      <h1 class="logo">Spark Lab</h1>
+      <br>
+  <nav>
+    <ul class="menu">
+      <li><%= link_to 'ホーム', home_path %></li>
+      <li><%= link_to 'サービス概要', service_path %></li>
+      <li><%= link_to '初めての方へ', greeting_path %></li>
+      <li><%= link_to '学習の流れ', process_path %></li>
+      <li><%= link_to '料金プラン', new_payment_path %></li>
+      <li><%= link_to 'お問い合わせ', contact_path %></li>
+      <li><%= link_to 'ログイン', new_user_session_path %></li>
+    </ul>
+  </nav>
+  <br>
+    </header>
+    
+<main>
+<section>
+   <style>
+    .container {
+      position: relative;
+      display: inline-block;
+
+       
+    }
+   
+
+    .button {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      font-size: 35px;
+    }
+  </style>
+  <div class="container">
+     <img src="/assets/1685522924953.jpg" alt="hero-image" width="100%" height="auto" >
+    <%= link_to "今すぐ始める", service_path, class: "button" %>
+  </div>
+</section>
+
+<section>
+  <div style="background-color: white;">
+    <br>]
+    <br>
+   <h2 style="margin-left: 20px;">～データサイエンスとは？～</h2>
+   <div class="hero-image">
+    <img src="/assets/i5aisPTt.png" alt="hero-image" width="100%" height="auto">
+  </div>
+  <p style="margin-left: 50px; margin-right: 50px;"><strong>組織的または社会的なゴール達成のため、データをもとにより良い意志決定ができるようにする。</strong>
+  <br>この目的を達成するためには、統計学、機械学習、データマイニング、データ可視化などの手法を使用大量のデータから価値ある情報や知見を引き出す必要があります。
+  <br>データサイエンスは、さまざまな分野で活用されています。例えば、ビジネス領域では、顧客行動の予測やマーケティングキャンペーンの最適化などに活用されます。<br>医療分野では、病気の診断や治療効果の予測に使用されます。交通分野では、交通流の最適化や交通事故の予測などに応用されます。
+  データサイエンスには、データの収集、データのクリーニングと前処理、モデルの選択と構築、モデルの評価と改善、結果の可視化などのフェーズが含まれます。データサイエンティストは、数学、統計学、プログラミング、データ解析の技術に精通しており、問題を定式化し、適切なモデルを選択し、データを解析する能力を持っています。</p>
+<br>
+<br>
+</div>
+</section>
+
+
+
+<section>
+  <div class="hero-image">
+    <img src="/assets/i5aisPTt (1).png" alt="hero-image" width="100%" height="auto">
+  </div>
+</section>
+
+<section>
+  <style>
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      margin-left: 20px;
+    }
+  </style>
+  <div style="background-color: #D3D3D3;">
+    <br>
+    <br>
+  <h3 style="margin-left: 20px;">しかし、データサイエンティストの育成は非常に難しく人数が少ないという問題があります。</h3>
+    <div class="container">
+        <img src="/assets/bruce-mars-xj8qrWvuOEs-unsplash.jpg" alt="hero-image" width="50%" height="auto">
+    <div class="text">
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li>技術的な知識とスキルの幅広さ: データサイエンスは多岐にわたる分野であり、統計学、機械学習、プログラミング、データ処理などさまざまな技術的な知識とスキルが必要です。これらの分野は専門知識が求められるため、それらを効果的に習得するには時間と努力が必要です。</li>
+      　<li>常に進化する技術とツール: データサイエンスの領域は急速に進化しており、新しいアルゴリズムやツールが続々と登場しています。データサイエンティストは常に最新のトレンドや技術を追いかけなければならず、学習と成長の継続的なプロセスが求められます。</li>
+      　<li>データの複雑さと品質の問題: データサイエンスの成功は、良質なデータに基づいていることに依存しています。しかし、現実のデータはしばしば欠損値、異常値、ノイズ、非構造化などの問題を抱えていることがあります。データをクリーンアップし、適切に処理するためにはデータの理解と前処理のスキルが必要です。</li>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section>
+   <style>
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      margin-left: 20px;
+    }
+  </style>
+  <br>
+  <br>
+  <br>
+  <h3 style="margin-left: 100px;">～未経験でも挫折せずに学びきれるカリキュラム～</h3>
+  <br>
+  <br>
+    <div class="container">
+        <img src="/assets/ytF9PJfw.png" alt="hero-image" width="50%" height="auto">
+  
+
+    <div class="text">
+      <br>
+     <h3>受講者が実務で得たいインサイトから逆算してメンターがカリキュラムを作成します。<br><br>
+     ゴールが先に見えているからこそモチベーションを保ちながら学ぶことができます。</h3>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</section>
+
+  
+<section>
+  <div style="background-color: #D3D3D3;">
+   <style>
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      margin-right: 10px;
+    }
+  </style>
+   <br>
+  <br>
+  <br>
+  <h1 style="margin-left: 850px;">～Vision～</h1>
+  <br>
+    <div class="container">
+       
+    <div class="text">
+      <br>
+      <ol style="margin-left: 10px; margin-right: 10px; font-size: 20px;">
+      <li>効果的な学習プラットフォーム: 使いやすいインターフェース、豊富な学習コンテンツ、インタラクティブな学習ツールなど優れた学習体験を提供する効果的なオンラインプラットフォームを構築します。</li>
+      <br>
+      <br>
+      <li>幅広いトピックのカバレッジ: 統計学、機械学習、データ可視化、データ処理など、データサイエンスの基本から応用までを網羅する幅広いトピックの学習コンテンツを提供します。</li>
+      <br>
+      <br>
+      <li>実践的なプロジェクトと課題: データサイエンスの学習においては、実際のプロジェクトや課題に取り組むことが重要です。ビジョンとして、実践的なプロジェクトやデータセットを提供し、学習者が実際の問題に対してデータサイエンスの手法を適用し、実際の経験を積むことをサポートします。</li>
+      <br>
+      <br>
+      <li>最新のトレンドと技術への対応: データサイエンスは急速に進化している分野であり、新しい手法や技術が頻繁に登場します。最新のトレンドや技術への対応を意識し、学習コンテンツやカリキュラムを更新・改善していきます。</li>
+      <br>
+    </ol>
+    </div>
+     <img src="/assets/junior-ferreira-7esRPTt38nI-unsplash.jpg" alt="hero-image" width="50%" height="auto">
+  </div>
+  <br>
+  <br>
+  </div>
+</section>
+
+<section>
+   <style>
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      margin-left: 20px;
+    }
+  </style>
+  <br>
+  <br>
+  <br>
+  <h1 style="margin-left: 300px;">～Value～</h1>
+  <br>
+    <div class="container">
+        <img src="/assets/jess-bailey-ycTvvg1mPU4-unsplash.jpg" alt="hero-image" width="50%" height="auto">
+  
+
+    <div class="text">
+      <br>
+     <ol>
+           <li>総合的な学習体験: 統計学、機械学習、データ処理、データ可視化などのトピックを包括的にカバーし、学習者がデータサイエンスの基礎から応用まで幅広いスキルを習得できるようにサポートします。豊富な学習コンテンツ、実践的なプロジェクト、インタラクティブな学習ツールなどを提供し、学習者が理解を深めるための環境を提供します。</li>
+    <br>
+        <li>実践的なプロジェクトと課題: データサイエンスは実践に基づく領域です。価値提案として、学習者に実際のデータセットや問題に取り組む機会を提供します。実践的なプロジェクトを通じて、データの分析、モデル構築、予測、洞察の獲得などのスキルを実際の状況で経験できるようにします。</li>
+       <br>
+           <li>プロジェクトベースのポートフォリオ構築: データサイエンスの分野では、実際のプロジェクトを通じてスキルを証明することが重要です。価値提案として、学習者がプロジェクトベースの学習を通じてポートフォリオを構築し、将来の就職やキャリアアップに役立つ実績を作成できる環境を提供します。</li>
+      
+     </ol>
+    </div>
+  </div>
+  <br>
+  <br>
+</section>
+
+  <h3 style="margin-left: 500px">～提供サービス～</h3>
+  <br>
+  <br>
+  <br>
+
+<section>
+   <style>
+    .container {
+      display: flex;
+       grid-template-columns: repeat(2, 1fr);
+      gap: 150px;
+    }
+
+    .image {
+      flex: 1;
+    }
+
+    .image img {
+      width: 70%;
+      height: auto;
+    }
+  </style>
+  <div class="container">
+  <div class="image">
+    <img src="/assets/1685610937042.jpg" alt="service-image" width="30%" height="auto" 2 style="margin-left: 50px">
+  </div>
+  <div class="image">
+     <img src="/assets/logo.png" style="border: 1px solid #000;" alt="service-image" width="30%" height="auto" 2 style="margin-right: 100px">
+  </div>
+  </div>
+</section>
+<br>
+<br>
+<br>
+
+        
+  </main>
+<footer>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="/assets/logo.png" alt="SparkLab-logo">
+      </div>
+      <div class="col-md-4">
+       <h3>利用の方へ</h3>
+       <ul>
+	     <li><%= link_to '初めての方へ', greeting_path %></li>
+	      <li><%= link_to '学習の流れ', process_path %></li>
+       	<li><%= link_to 'Webテキストで学ぶ', qq_data_science_traning_path %></li>
+	      <li><%= link_to 'コミュニティで学ぶ', messages_path %></li>
+       </ul>
+       <br>
+       <h3>プログラミング言語の導入</h3>
+       <ul>
+	        <li><%= link_to 'R導入ガイド', article50_path %></li>
+	        <li><%= link_to 'python導入ガイド', article51_path %></li>
+	        <li><%= link_to 'julia導入ガイド', article52_path %></li>
+	      </ul>
+    </div>
+     <div class="col-md-4">
+      <h3>運営に関する情報</h3>
+      <ul>
+        <li><%= link_to '運営会社', company_path %></li>
+        <li><%= link_to '利用規約', terms_path %></li>
+        <li><%= link_to 'プライバシーポリシー', privacypolicy_path %></li>
+        <li><%= link_to '特定商取引法に関する表示', raw_path %></li>
+        <li><%= link_to 'お問い合わせ', contact_path %></li>
+      </ul>
+     </div>
+    </div>
+  <div class="footer-bottom">
+  <p>&copy; 2019 SparkLab,LLC All rights reserved.</p>
+  </div>
+</footer>
+      </body>
+</html>

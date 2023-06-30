@@ -1,0 +1,173 @@
+<style>
+.container {
+  margin-bottom: 20px;
+}
+
+.panel {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.panel-heading {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.panel-body {
+  padding: 20px;
+}
+
+.message {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.message .info .label-info {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.message .body {
+  margin-bottom: 10px;
+}
+
+.message .actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message .actions a {
+  padding: 5px 10px;
+  background-color: #337ab7;
+  color: #fff;
+  border-radius: 4px;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.message .actions a:hover {
+  background-color: #23527c;
+}
+
+.reply-form {
+  margin-top: 20px;
+}
+
+.reply-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.reply-form .btn-primary {
+  margin-top: 10px;
+}
+
+.reply-list {
+  margin-top: 20px;
+}
+
+.reply {
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.reply .content {
+  margin-bottom: 5px;
+}
+
+.reply .actions {
+  text-align: right;
+}
+
+.reply .actions a {
+   padding: 5px 10px;
+  background-color: #d9534f;
+  color: #fff;
+  border-radius: 4px;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.reply .actions a:hover {
+  color: #b52c28;
+}
+</style>
+
+<div class="container">
+  <% if notice %>
+    <div class="alert alert-info">
+      <%= notice %>
+    </div>
+  <% end %>
+</div>
+
+<h2>投稿する</h2>
+<%= render 'form' %>
+<br>
+<br>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>メッセージ一覧</h2>
+  </div>
+    
+  <div class="panel-body">
+    <% @messages.each do |message| %>
+      <div class="message">
+        <div class="info">
+          <span class="label label-info"><%= message.name %></span>
+          
+        </div>
+        <div class="body">
+          <p><%= message.body %></p>
+        </div>
+        <div class="actions">
+          <%= link_to "編集", edit_message_path(message), class: "btn btn-sm btn-primary" %>
+          <%= button_to "削除",message,
+          method: :delete,
+          data: { confirm: "削除してもよろしいですか？" },
+          class: "btn btn-sm btn-danger"%>
+        </div>
+        
+        <div class="reply-form">
+          <%= form_with(model: [message, Reply.new], url: message_replies_path(message), class: "reply-form") do |f| %>
+            <%= f.text_area :content, class: "form-control", placeholder: "返信を入力してください" , autocomplete: "off"%>
+            <%= f.submit "返信する", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+        
+        <div class="reply-list">
+          <% message.replies.each do |reply| %>
+            <div class="reply">
+              <p class="content"><%= reply.content %></p>
+              <div class="actions">
+               <%= button_to "削除", "messages/#{message.id}/replies/#{reply.id}", method: :delete, data: { confirm: "削除してもよろしいですか？" }, class: "btn btn-sm btn-danger" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

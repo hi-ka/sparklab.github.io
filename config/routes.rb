@@ -1,0 +1,97 @@
+Rails.application.routes.draw do
+    
+   
+   resources :messages, except: [:index, :new] do
+     resources :replies, only: [:create, :destroy]
+   end
+  
+  devise_for :users
+resources :questions do
+    member do
+      post :answer
+      root "questions#index"
+      get 'questions/index'
+      get 'questions/show'
+      get 'questions/answer'
+    end
+  end
+   
+  get 'home' => 'home#index'
+  get 'service' => 'service#index'
+   get 'login_form' => 'login_form#index'
+   get 'article' => 'article#index'
+   get 'article1' => 'article1#index'
+   get 'article2' => 'article2#index'
+   get 'article3' => 'article3#index'
+   get 'article4' => 'article4#index'
+   get 'article5' => 'article5#index'
+   get 'article6' => 'article6#index'
+   get 'article7' => 'article7#index'
+   get 'article8' => 'article8#index'
+   get 'article9' => 'article9#index'
+   get 'article10' => 'article10#index'
+   get 'article11' => 'article11#index'
+   get 'article12' => 'article12#index'
+   get 'article13' => 'article13#index'
+   get 'article14' => 'article14#index'
+   get 'article15' => 'article15#index'
+   get 'article16' => 'article16#index'
+   get 'article17' => 'article17#index'
+   get 'article18' => 'article18#index'
+   get 'article19' => 'article19#index'
+   get 'article20' => 'article20#index'
+   get 'article21' => 'article21#index'
+   get 'article22' => 'article22#index'
+   get 'article23' => 'article23#index'
+   get 'article24' => 'article24#index'
+   get 'article25' => 'article25#index'
+   get 'article26' => 'article26#index'
+   get 'article27' => 'article27#index'
+   get 'article28' => 'article28#index'
+   get 'article29' => 'article29#index'
+   get 'article30' => 'article30#index'
+   get 'article31' => 'article31#index'
+   get 'article32' => 'article32#index'
+   get 'article33' => 'article33#index'
+   get 'article34' => 'article34#index'
+   get 'article35' => 'article35#index'
+   get 'article36' => 'article36#index'
+   get 'article37' => 'article37#index'
+   get 'article38' => 'article38#index'
+   get 'article39' => 'article39#index'
+   get 'article40' => 'article40#index'
+   get 'article41' => 'article41#index'
+   get 'article42' => 'article42#index'
+   get 'article43' => 'article43#index'
+   get 'article44' => 'article44#index'
+   get 'article45' => 'article45#index'
+   get 'article46' => 'article46#index'
+   get 'article47' => 'article47#index'
+   get 'article48' => 'article48#index'
+   get 'article49' => 'article49#index'
+   get 'article50' => 'article50#index'
+   get 'article51' => 'article51#index'
+   get 'article52' => 'article52#index'
+   get 'article53' => 'article53#index'
+   get 'article54' => 'article54#index'
+   get 'article55' => 'article55#index'
+   get 'article56' => 'article56#index'
+   get 'article57' => 'article57#index'
+   get 'article58' => 'article58#index'
+   get 'article59' => 'article59#index'
+   get 'greeting' => 'greeting#index'
+   get 'process' => 'process#index'
+   get 'messages' => 'messages#index'
+   get 'qq_data_science_traning' => 'qq_data_science_traning#index'
+   get 'company' => 'company#index'
+   get 'terms' => 'terms#index'
+   get 'privacypolicy' => 'privacypolicy#index'
+   get 'raw' => 'raw#index'
+   get 'contact' => 'contact#index'
+  post 'contact' => 'contact#send_message'
+  get '/payments/new', to: 'payments#new', as: 'new_payment'
+  get 'payments/new', to: 'payments#new'
+  post 'payments', to: 'payments#create'
+   resources :payments, only: [:new, :create]
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+end

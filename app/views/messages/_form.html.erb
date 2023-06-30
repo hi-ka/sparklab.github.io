@@ -1,0 +1,24 @@
+<%= form_with(model: @message, local: true) do |form| %>
+   <% if @message.errors.any? %>
+    <div class="alert alert-danger">
+     <%= "エラーが発生しました" %>
+    <ul>
+      <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", autocomplete: "off" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :body %>
+    <%= form.text_area :body, class: "form-control", autocomplete: "off" %>
+  </div>
+
+  <%= form.submit "保存", class: "btn btn-primary" %>
+<% end %>

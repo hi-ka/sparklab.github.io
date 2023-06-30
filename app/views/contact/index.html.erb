@@ -1,0 +1,118 @@
+ <style>
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .form-container li {
+    margin-bottom: 20px;
+  }
+
+  .form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="tel"],
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  .form-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-container textarea {
+    height: 120px;
+  }
+
+  .form-container input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .form-container button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .form-container button[type="submit"]:hover {
+    background-color: #23527c;
+  }
+</style>
+
+<div class="form-container">
+  <h2>お問い合わせフォーム</h2>
+
+  <%= form_with url: contact_path, method: :post do |form| %>
+    <ul>
+      <li>
+        <%= form.label :name, 'お名前:' %>
+        <%= form.text_field :name %>
+      </li>
+      <li>
+        <%= form.label :email, 'メールアドレス:' %>
+        <%= form.email_field :email %>
+      </li>
+      <li>
+        <%= form.label :phone, '電話番号:' %>
+        <%= form.telephone_field :phone %>
+      </li>
+      <li>
+        <%= form.label :subject, 'お問い合わせの種類:' %>
+        <%= form.select :subject, ['質問', 'お問い合わせ', 'ご意見・ご感想'] %>
+      </li>
+      <li>
+        <%= form.label :message, 'お問い合わせ内容:' %>
+        <%= form.text_area :message %>
+      </li>
+      <li>
+          <div class="form-group">
+  <div class="row">
+    <div class="col-md-8">
+      <%= form.label :consent, '個人情報の取り扱いについての同意する' %>
+    </div>
+    <div class="col-md-4">
+      <%= form.check_box :consent %>
+    </div>
+  </div>
+</div>
+      </li>
+      
+<li>
+<%= form.submit '送信する' %>
+</li>
+</ul>
+<% end %>
+
+</div>

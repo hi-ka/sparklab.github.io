@@ -1,0 +1,13 @@
+
+       <h1>二択問題</h1>
+       <p>以下の問題に回答してください。</p>
+       <ul>
+        <% @questions.each do |question| %>
+        <p><%= question.text %></p>
+        <li><%= link_to question.choice1, question_path(question) %></li>
+        <li><%= link_to question.choice2, question_path(question) %></li>
+       <% end %>
+       </ul>
+   
+
+

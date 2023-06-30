@@ -1,0 +1,109 @@
+<style>
+  #scroll-button {
+  position:  absolute;
+  top: 15%;
+  right: -20%;
+}
+
+#scroll-button button {
+  
+  transform: translate(-50%, -50%);
+      padding: 5px 40px;
+       letter-spacing: 4px;
+      background-color: rgba(255, 0, 0, 0.5);
+      color: #333;
+      border: 1px solid black;
+      border-radius: 10px;
+      font-size: 70px;
+}
+
+
+</style>
+<section>
+<img src="/assets/reason.jpg" width="100%" height="auto" >
+<div id="scroll-button">
+      <button>今すぐ購入する</button>
+    </div>
+</section>
+<img src="/assets/reason2.svg" width="100%" height="auto" >
+<img src="/assets/curriculum.svg" width="100%" height="auto" >
+<img src="/assets/statas.svg" width="100%" height="auto" >
+<br>
+<style>
+    // payments.scss
+
+.payment-form {
+  max-width: 400px;
+  margin: 0 auto;
+
+  .payment-form__form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+    }
+  }
+}
+
+</style>
+<br>
+<h2>購入する</h2>
+<br>
+<p>下記フォームからご購入できます。</p>
+<p>利用可能なカードブランド</p>
+<img src="/assets/card_5brand.png" width="50%" height="auto" >
+
+<br>
+<% if flash[:error].present? %>
+  <div class="alert alert-danger">
+    <%= flash[:error] %>
+  </div>
+<% end %>
+<br>
+<div class="payment-form">
+  <%= form_tag payments_path, class: 'payment-form__form' do %>
+    <div class="form-group">
+      <%= label_tag :card_number, 'Card Number' %>
+      <%= text_field_tag :card_number, nil, class: 'form-control', placeholder: 'Enter card number' %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :expiry_month, 'Expiry Month' %>
+      <%= text_field_tag :expiry_month, nil, class: 'form-control', placeholder: 'MM' %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :expiry_year, 'Expiry Year' %>
+      <%= text_field_tag :expiry_year, nil, class: 'form-control', placeholder: 'YYYY' %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :cvc, 'CVC' %>
+      <%= text_field_tag :cvc, nil, class: 'form-control', placeholder: 'Enter CVC' %>
+    </div>
+    <%= submit_tag '￥２９，８００（税込 ￥３２，７８０）を支払う', class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+

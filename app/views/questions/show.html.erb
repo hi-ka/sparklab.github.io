@@ -1,0 +1,11 @@
+
+       <h1>二択問題</h1>
+       <p><%= @question.text %></p>
+       <%= form_tag(answer_question_path(@question)) do %>
+       <%= radio_button_tag(:choice, 0) %>
+       <%= label_tag(:choice1, @question.choice1) %><br>
+       <%= radio_button_tag(:choice, 1) %>
+       <%= label_tag(:choice2, @question.choice2) %><br>
+       <%= submit_tag("回答する") %>
+       <% end %>
+  

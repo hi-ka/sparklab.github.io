@@ -1,0 +1,116 @@
+@import 'bootstrap';
+
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 30px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #ff9900;
+}
+
+
+nav ul {
+  list-style: none;
+  justify-content: space-between;
+  text-align: right;
+  display: flex;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.main-content .content-area {
+  padding: 20px 15px;
+}
+
+.btn-purchase {
+  background-color: #f44336;
+  border-color: #f44336;
+}
+
+.btn-purchase:hover {
+  background-color: #e53935;
+  border-color: #e53935;
+}
+
+.sidebar aside {
+  background: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-menu{
+    text-align: center;
+}
+
+.footer-menu ul{
+    list-style-type: none;
+    margin: 0;
+  padding: 0;
+  padding-left: 5px;
+  display: flex;
+  text-align: center;
+}
+
+.footer-menu li{
+     display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-menu li a{
+    color: gray;
+}
+
+/*
+　*= require_tree .
+ *= require_self
+ *= require bootstrap/dist/css/bootstrap.min
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
